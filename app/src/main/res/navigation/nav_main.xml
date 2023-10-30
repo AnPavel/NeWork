@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/navPostsFragment">
+
+    <fragment
+        android:id="@+id/navPostsFragment"
+        android:name="ru.netology.nework.ui.PostsFragment"
+        android:label="@string/title_posts"
+        tools:layout="@layout/fragment_posts">
+        <action
+            android:id="@+id/action_navPostsFragment_to_navBottomSheetFragment"
+            app:destination="@+id/navBottomSheetFragment" />
+        <action
+            android:id="@+id/action_navPostsFragment_to_PostPreviewFragment"
+            app:destination="@id/postPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/postPreviewFragment"
+        android:name="ru.netology.nework.ui.PostPreviewFragment"
+        android:label="@string/title_post"
+        tools:layout="@layout/fragment_post_preview">
+    </fragment>
+
+    <fragment
+        android:id="@+id/exitFragment"
+        android:name="ru.netology.nework.ui.ExitFragment"
+        android:label="@string/title_exit"
+        tools:layout="@layout/fragment_exit">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navUsersFragment"
+        android:name="ru.netology.nework.ui.UsersFragment"
+        android:label="@string/title_users"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_navUsersFragment_to_navBottomSheetFragment"
+            app:destination="@id/navBottomSheetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navEventsFragment"
+        android:name="ru.netology.nework.ui.EventsFragment"
+        android:label="@string/title_events"
+        tools:layout="@layout/fragment_events">
+        <action
+            android:id="@+id/action_navEvents_to_navBottomSheetFragment"
+            app:destination="@+id/navBottomSheetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navJobsFragment"
+        android:name="ru.netology.nework.ui.JobsFragment"
+        android:label="@string/title_jobs"
+        tools:layout="@layout/fragment_jobs" />
+
+    <fragment
+        android:id="@+id/navProfileFragment"
+        android:name="ru.netology.nework.ui.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_navProfileFragment_to_newPostFragment"
+            app:destination="@+id/navNewPostFragment" />
+        <action
+            android:id="@+id/action_navProfileFragment_to_newEventFragment"
+            app:destination="@+id/navNewEventFragment" />
+        <action
+            android:id="@+id/action_navProfileFragment_to_newJobFragment"
+            app:destination="@+id/navNewJobFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navNewPostFragment"
+        android:name="ru.netology.nework.ui.NewPostFragment"
+        android:label="@string/title_new_post"
+        tools:layout="@layout/fragment_new_post" />
+
+    <fragment
+        android:id="@+id/navNewEventFragment"
+        android:name="ru.netology.nework.ui.NewEventFragment"
+        android:label="@string/title_new_event"
+        tools:layout="@layout/fragment_new_event" />
+
+    <fragment
+        android:id="@+id/navNewJobFragment"
+        android:name="ru.netology.nework.ui.NewJobFragment"
+        android:label="@string/title_new_job"
+        tools:layout="@layout/fragment_new_job" />
+
+    <fragment
+        android:id="@+id/navWallFragment"
+        android:name="ru.netology.nework.ui.WallFragment"
+        android:label="@string/title_wall"
+        tools:layout="@layout/fragment_wall">
+        <action
+            android:id="@+id/action_NavWallFragment_to_navBottomSheetFragment"
+            app:destination="@+id/navBottomSheetFragment" />
+        <action
+            android:id="@+id/action_NavWallFragment_to_navNewPostFragment"
+            app:destination="@id/navNewPostFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navMapFragment"
+        android:name="ru.netology.nework.ui.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/navImageAttachmentFragment"
+        android:name="ru.netology.nework.ui.ImageAttachmentFragment"
+        android:label="fragment_image_attachment"
+        tools:layout="@layout/fragment_image_attachment" />
+
+    <fragment
+        android:id="@+id/navSignInFragment"
+        android:name="ru.netology.nework.ui.SignInFragment"
+        android:label="@string/sign_in"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_navSignInFragment_to_navAppActivity"
+            app:destination="@+id/navAppActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navSignUpFragment"
+        android:name="ru.netology.nework.ui.SignUpFragment"
+        android:label="@string/sign_up"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_navSignUpFragment_to_navAppActivity"
+            app:destination="@+id/navAppActivity" />
+        <action
+            android:id="@+id/action_navSignUpFragment_to_navProfileFragment"
+            app:destination="@+id/navProfile" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/navBottomSheetFragment"
+        android:name="ru.netology.nework.ui.BottomSheetFragment"
+        android:label="@string/title_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" />
+
+    <activity
+        android:id="@+id/navAppActivity"
+        android:name="ru.netology.nework.ui.AppActivity"
+        android:label="AppActivity" />
+
+</navigation>

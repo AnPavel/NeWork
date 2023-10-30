@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_layout_activity">4dp</dimen>
+    <dimen name="dimen_marginStart">8dp</dimen>
+    <dimen name="dimen_marginTop12">12dp</dimen>
+    <dimen name="dimen_marginTop16">16dp</dimen>
+    <dimen name="dimen_marginTop24">24dp</dimen>
+    <dimen name="dimen_marginTop32">32dp</dimen>
+    <dimen name="dimen_marginTop48">48dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_margin48">148dp</dimen>
+    <dimen name="common_dimen_0dp">0dp</dimen>
+    <dimen name="common_dimen_4dp">4dp</dimen>
+    <dimen name="common_dimen_8dp">8dp</dimen>
+    <dimen name="common_dimen_16dp">16dp</dimen>
+    <dimen name="common_dimen_24dp">24dp</dimen>
+    <dimen name="common_dimen_32dp">32dp</dimen>
+    <dimen name="special_attachment_dimen">200dp</dimen>
+    <dimen name="big_dimen">48dp</dimen>
+    <dimen name="small_dimen">10dp</dimen>
+    <dimen name="posts_avatar_size16">16dp</dimen>
+    <dimen name="posts_avatar_size48">48dp</dimen>
+    <dimen name="icon_button_padding12">12dp</dimen>
+    <dimen name="icon_button_padding24">24dp</dimen>
+    <dimen name="icon_button_size24">24dp</dimen>
+    <dimen name="icon_button_size48">48dp</dimen>
+    <dimen name="enlarged_spacing">24dp</dimen>
+    <dimen name="double_spacing">48dp</dimen>
+    <dimen name="large_spacing">96dp</dimen>
+
+    <dimen name="common_spacing_extra_large">32dp</dimen>
+    <dimen name="common_spacing_large">16dp</dimen>
+    <dimen name="common_spacing_medium">8dp</dimen>
+    <dimen name="common_spacing_small">4dp</dimen>
+    <dimen name="common_spacing_0dp">0dp</dimen>
+
+    <dimen name="posts_avatar_size">48dp</dimen>
+    <dimen name="button_corner_radius">24dp</dimen>
+    <dimen name="button_size_smallest">6dp</dimen>
+    <dimen name="button_size_small">12dp</dimen>
+    <dimen name="button_size">24dp</dimen>
+    <dimen name="button_size_without_icon">44dp</dimen>
+    <dimen name="button_size_large">48dp</dimen>
+    <dimen name="divider_start_margin">80dp</dimen>
+    <dimen name="seek_bar">300dp</dimen>
+
+    <dimen name="sign_avatar_size">128dp</dimen>
+    <dimen name="sign_spacing_extra_large">128dp</dimen>
+    <dimen name="sign_spacing_large">64dp</dimen>
+    <dimen name="sign_spacing_medium">32dp</dimen>
+    <dimen name="sign_spacing_small">16dp</dimen>
+
+    <dimen name="common_spacing16">16dp</dimen>
+    <dimen name="common_spacing32">32dp</dimen>
+
+    <dimen name="pole_spacing180">180dp</dimen>
+    <dimen name="pole_spacing200">200dp</dimen>
+    <dimen name="pole_spacing250">250dp</dimen>
+
+    <dimen name="text_size_10sp">10sp</dimen>
+    <dimen name="text_size_14sp">14sp</dimen>
+    <dimen name="text_size_21sp">21sp</dimen>
+    <dimen name="text_size_28sp">28sp</dimen>
+    <dimen name="text_size_32sp">32sp</dimen>
+    <dimen name="text_size_48sp">48sp</dimen>
+
+</resources>

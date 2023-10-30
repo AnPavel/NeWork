@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.NewEventFragment">
+
+    <ScrollView
+        android:id="@+id/scroll_view_fragment_new_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_text_fragment_new_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_spacing_small"
+                android:layout_marginTop="@dimen/common_spacing_large"
+                android:layout_marginEnd="@dimen/common_spacing_small"
+                android:background="@color/transparent"
+                android:gravity="start|top"
+                android:hint="@string/text_new_event"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/common_spacing_medium"
+                android:textColorHint="@color/purple_500"
+                tools:ignore="MissingConstraints"
+                tools:text="@tools:sample/lorem[50]" />
+
+            <FrameLayout
+                android:id="@+id/frame_layout_photo_fragment_new_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/image_view_photo_fragment_new_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/description_photo"
+                    tools:srcCompat="@drawable/ic_baseline_image_96" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_remove_photo_fragment_new_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:text="@string/clear"
+                    android:textAllCaps="false"
+                    app:cornerRadius="@dimen/button_corner_radius" />
+
+            </FrameLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_date_fragment_new_event"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_spacing_small"
+                android:layout_marginTop="@dimen/common_spacing_large"
+                android:layout_marginEnd="@dimen/common_spacing_small"
+                android:gravity="start|top"
+                android:hint="@string/text_new_event_date"
+                android:inputType="date"
+                android:padding="@dimen/common_spacing_medium"
+                app:boxStrokeColor="@color/purple_500"
+                app:hintTextColor="@color/purple_500"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_date_fragment_new_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    tools:text="@tools:sample/date/ddmmyy" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_time_fragment_new_event"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_spacing_small"
+                android:layout_marginTop="@dimen/common_spacing_large"
+                android:layout_marginEnd="@dimen/common_spacing_small"
+                android:gravity="start|top"
+                android:hint="@string/text_new_event_time"
+                android:inputType="time"
+                android:padding="@dimen/common_spacing_medium"
+                app:boxStrokeColor="@color/purple_500"
+                app:hintTextColor="@color/purple_500"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_time_fragment_new_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    tools:text="@tools:sample/date/hhmm" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_add_speakers_fragment_new_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/common_spacing_large"
+                android:text="@string/add_speakers"
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/button_corner_radius" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_app_bar_fragment_new_event"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image_view_take_photo_fragment_new_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@string/description_take_photo"
+            android:padding="@dimen/common_spacing_large"
+            android:src="@drawable/ic_baseline_photo_camera_48" />
+
+        <ImageView
+            android:id="@+id/image_view_pick_photo_fragment_new_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@string/description_pick_photo"
+            android:padding="@dimen/common_spacing_large"
+            android:src="@drawable/ic_baseline_photo_48" />
+
+        <ImageView
+            android:id="@+id/image_view_pick_geo_fragment_new_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@string/description_pick_photo"
+            android:padding="@dimen/common_spacing_large"
+            android:src="@drawable/ic_baseline_add_location_48" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

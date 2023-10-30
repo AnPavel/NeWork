@@ -1,0 +1,185 @@
+<resources>
+    <string name="app_name">NeWork</string>
+    <string name="logo_descript">Logo</string>
+    <string name="imageView_descript">imageView</string>
+    <string name="field_name_on_screen">NeWork!!</string>
+    <string name="image_buttom_more_vert">Menu</string>
+    <string name="error_empty_content">The data cannot be empty</string>
+    <string name="post_text">Enter a post</string>
+
+    <string name="button_cancel">Cancel</string>
+    <string name="button_retry">Retry</string>
+    <string name="button_save">Save</string>
+
+    <string name="menu_edit">Edit</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_refresh">Refresh</string>
+
+    <string name="chooser_share_post">NeWork_share</string>
+    <string name="description_post_save">Description post save</string>
+    <string name="simple_description">Simple description</string>
+    <string name="add_post">Add post</string>
+    <string name="google_play_unavailable">Google play unavailable</string>
+    <string name="channel_remote_name">Channel remote name</string>
+    <string name="channel_remote_description">Channel remote description</string>
+
+    <string name="error_loading">Error loading</string>
+    <string name="error_refresh">Error refresh</string>
+    <string name="error_save">Error save</string>
+    <string name="error_like">Error likes</string>
+    <string name="error_password_confirm">Error password confirm</string>
+    <string name="error_sign_in">User name not found or incorrect password/login</string>
+
+    <string name="retry_loading">Retry loading</string>
+
+    <string name="empty_content_warning">Content can not be empty</string>
+    <string name="buttom_snackbar_txt">Retry</string>
+    <string name="clear">Clear</string>
+    <string name="picker_error">Pick error</string>
+    <string name="recent_entries">Recent Entries</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="logout">Logout</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="password_retry">Password confirm</string>
+
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="clear_photo">Clear photo</string>
+    <string name="confirm">Confirm</string>
+    <string name="snak_auth">Need to be authorized</string>">
+    <string name="notification_new">New notification</string>
+    <string name="notification_user_liked">User liked the post</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="week_ago">Week ago</string>
+    <string name="stay_the_app">Are you sure you want to leave the application?</string>
+    <string name="problem_loading">Data downloading from server failed. Try later</string>
+    <string name="contentAd" translatable="false">contentAd</string>
+    <string name="news">Recent entries</string>
+    <string name="to_continue">Continue</string>
+    <string name="mention_anyone" translatable="false">Mention anyone</string>
+    <string name="video">Video</string>
+
+    <string name="be_lost">be lost</string>
+    <string name="content">Content</string>
+    <string name="add">Add</string>
+    <string name="exit">Exit</string>
+
+    <string name="need_permission">Location permission required</string>
+    <string name="upscale">Upscale</string>
+    <string name="downscale">Downscale</string>
+    <string name="get_location">Get location</string>
+    <string name="addGeo" translatable="false">addGeo</string>
+    <string name="position" translatable="false">position</string>
+    <string name="name_of_the_organization" translatable="false">Name organization</string>
+    <string name="start_date" translatable="false">start_date</string>
+    <string name="end_date" translatable="false">end_date</string>
+    <string name="action_sign_in_short" translatable="false">action_sign_in_short</string>
+    <string name="link" translatable="false">link</string>
+    <string name="add_job" translatable="false">add_job</string>
+    <string name="first_three" translatable="false">first_three</string>
+    <string name="image" translatable="false">Image</string>
+    <string name="name_user">Name user</string>
+    <string name="add_avatar">Add avatar</string>
+    <string name="name_author">Name author</string>
+
+
+    <string name="title_application">Application name</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_posts">Posts</string>
+    <string name="title_post">Post</string>
+    <string name="title_users">Users</string>
+    <string name="title_user">User</string>
+    <string name="title_events">Events</string>
+    <string name="title_event">Event</string>
+    <string name="title_jobs">Jobs</string>
+    <string name="title_job">Job</string>
+    <string name="title_wall">Wall</string>
+    <string name="title_map">Map</string>
+    <string name="title_image">Image</string>
+    <string name="title_new_post">New Post</string>
+    <string name="title_new_event">New Event</string>
+    <string name="title_new_job">New Job</string>
+    <string name="title_bottom_sheet" translatable="false">Bottom Sheet</string>
+
+
+    <string name="fragment_of_events">Events</string>
+    <string name="fragment_of_posts">Posts</string>
+
+    <string name="description_fab_add" translatable="false" />
+    <string name="description_post_author_avatar" translatable="false" />
+    <string name="description_post_attachment" translatable="false" />
+    <string name="description_post_like">Post like</string>
+    <string name="description_post_share">Post share</string>
+    <string name="description_post_menu">Description post menu</string>
+    <string name="description_share" translatable="false" />
+    <string name="description_view" translatable="false" />
+    <string name="description_mention" translatable="false" />
+    <string name="description_background_video" translatable="false" />
+    <string name="description_play" translatable="false" />
+    <string name="description_take_photo" translatable="false" />
+    <string name="description_pick_photo" translatable="false" />
+    <string name="description_event_author_avatar" translatable="false" />
+    <string name="description_event_attachment" translatable="false" />
+    <string name="description_image_full_screen" translatable="false" />
+    <string name="description_splash" translatable="false" />
+    <string name="description_add_menu">Description add menu</string>
+    <string name="description_photo">Description photo</string>
+    <string name="description_no_play" translatable="false">Description no play</string>
+
+    <string name="text_new_post">New Post text</string>
+    <string name="text_new_event">New Event text</string>
+    <string name="text_event_date">Event date :</string>
+    <string name="text_new_event_date">Date : </string>
+    <string name="text_new_event_time">Time : </string>
+    <string name="text_job_name">Company : </string>
+    <string name="text_job_position">Position : </string>
+    <string name="text_job_start">From : </string>
+    <string name="text_job_finish">To : </string>
+    <string name="text_job_now">now</string>
+    <string name="text_job_link" translatable="false">Site : </string>
+
+    <string name="speakers" translatable="false">Speakers</string>
+    <string name="add_speakers" translatable="false">Speakers + </string>
+    <string name="no_speakers" translatable="false">No Speakers</string>
+    <string name="like" translatable="false">Like</string>
+    <string name="participate" translatable="false">Participate</string>
+    <string name="mention" translatable="false">Mention</string>
+    <string name="avatar_user" translatable="false">Avatar User</string>
+    <string name="sign_user_name" translatable="false">Name user</string>
+    <string name="set_point_button" translatable="false">Set point</string>
+    <string name="set_marker" translatable="false">Set geolocation</string>
+    <string name="location_button" translatable="false">Location</string>
+
+    <string name="sign_login">Login</string>
+    <string name="sign_password">Password</string>
+    <string name="sign_repeat_password">Repeat Password</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_in_name">Authorization</string>
+    <string name="sign_up_name">Registration</string>
+    <string name="sign_in_and_out" translatable="false">Sign In / Sign Out</string>
+    <string name="create_account">Create account</string>
+
+    <string name="no_likers" translatable="false">No likes Owners</string>
+    <string name="no_participants" translatable="false">No Participants</string>
+    <string name="no_location">No access to location</string>
+    <string name="no_mentions" translatable="false">No mentions</string>
+
+    <string name="error_empty_fields">Fields should not be empty</string>
+    <string name="error_auth">You are not authorized</string>
+    <string name="error_field_required" translatable="false">Error field required</string>
+    <string name="error_login">Error login</string>
+    <string name="error_password">Error password</string>
+    <string name="error_empty_posts">There are no posts.\nIf you create a new post, it will appear here</string>
+    <string name="error_empty_events">There are no events.\nIf you create a new event, it will appear here</string>
+    <string name="error_empty_jobs">There are no jobs.\nIf you create a new job, it will appear here</string>
+    <string name="empty_fields">Fields must not be empty</string>
+    <string name="title_exit">Exit</string>
+
+
+</resources>

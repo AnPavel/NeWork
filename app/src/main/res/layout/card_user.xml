@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/user_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_spacing_0dp"
+        app:layout_constraintBottom_toTopOf="@id/user_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_avatar_card"
+        android:layout_width="@dimen/posts_avatar_size"
+        android:layout_height="@dimen/posts_avatar_size"
+        android:layout_marginStart="@dimen/common_spacing_large"
+        android:layout_marginTop="@dimen/common_spacing_large"
+        android:contentDescription="@string/avatar_user"
+        android:src="@drawable/ic_baseline_user_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ic_baseline_user_24" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing_large"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/sign_user_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_avatar_card"
+        app:layout_constraintStart_toEndOf="@+id/user_avatar_card"
+        app:layout_constraintTop_toTopOf="@+id/user_avatar_card"
+        tools:text="User Name" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/user_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_spacing_large"
+        app:dividerInsetEnd="@dimen/common_spacing_large"
+        app:dividerInsetStart="@dimen/divider_start_margin"
+        app:dividerColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/user_name"
+        app:layout_constraintTop_toBottomOf="@id/user_avatar_card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

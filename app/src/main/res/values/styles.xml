@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.App.LikeCheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_like</item>
+        <item name="android:button">@drawable/ic_like_selector</item>
+    </style>
+
+    <style name="Widget.App.ShareButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="buttonTint">@color/color_share</item>
+        <item name="android:button">@drawable/ic_share_selector</item>
+    </style>
+
+    <style name="Widget.AppTheme.ViewsButton" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="iconTint">@color/color_default</item>
+        <item name="icon">@drawable/ic_views_24</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+    <style name="Widget.App.RedEyeButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="buttonTint">@color/color_redeye</item>
+        <item name="android:button">@drawable/ic_redeye_selector</item>
+    </style>
+
+    <style name="Widget.App.MenuVert" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="buttonTint">@color/color_share</item>
+        <item name="android:button">@drawable/ic_menu_vert_selector</item>
+    </style>
+
+    <style name="RoundedCornerButton" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">#1a237e</item>
+        <item name="colorControlHighlight">#673ab7</item>
+        <item name="background">@drawable/ic_baseline_arrow_upward_24</item>
+    </style>
+
+    <style name="Widget.AppTheme.IconButton" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="iconTint">@color/icon_button</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingStart">@dimen/icon_button_padding12</item>
+        <item name="android:paddingEnd">@dimen/icon_button_padding12</item>
+        <item name="android:minWidth">@dimen/icon_button_size48</item>
+        <item name="android:minHeight">@dimen/icon_button_size48</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize20Percent" parent="">
+        <item name="cornerSize">20%</item>
+    </style>
+
+
+    <style name="Widget.AppTheme.PoleLink" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textColor">@color/purple_500</item>
+        <item name="android:paddingStart">@dimen/icon_button_padding12</item>
+        <item name="android:paddingEnd">@dimen/icon_button_padding12</item>
+        <item name="android:minWidth">@dimen/icon_button_size48</item>
+        <item name="android:minHeight">@dimen/icon_button_size48</item>
+    </style>
+
+    <style name="Widget.App.MenuCheckBox" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconTint">@color/purple_500</item>
+        <item name="iconPadding">0dp</item>
+        <item name="icon">@drawable/ic_baseline_more_vert_24</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/button_size_large</item>
+        <item name="android:minHeight">@dimen/button_size_large</item>
+    </style>
+
+    <style name="Widget.AppTheme.SpeakersSumCheckBox" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/purple_500</item>
+        <item name="icon">@drawable/ic_baseline_record_voice_over_24</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/purple_500</item>
+        <item name="android:text">@string/speakers</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/button_size_smallest</item>
+        <item name="android:minHeight">@dimen/button_size_smallest</item>
+    </style>
+
+    <style name="Widget.App.Location" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconTint">@color/icon_button</item>
+        <item name="icon">@drawable/ic_baseline_location_24</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/button_size</item>
+        <item name="android:minHeight">@dimen/button_size</item>
+    </style>
+
+    <style name="Widget.AppTheme.LikeSumCheckBox" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/purple_500</item>
+        <item name="icon">@drawable/ic_baseline_favorite_border_24</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/button_size_smallest</item>
+        <item name="android:minHeight">@dimen/button_size_smallest</item>
+    </style>
+
+    <style name="Widget.AppTheme.LikeCheckBox" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/purple_500</item>
+        <item name="icon">@drawable/ic_baseline_favorite_24</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/purple_500</item>
+        <item name="android:text">@string/like</item>
+        <item name="textAllCaps">false</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/button_size</item>
+        <item name="android:minHeight">@dimen/button_size</item>
+    </style>
+
+    <style name="Widget.AppTheme.ParticipantsSumCheckBox" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/purple_500</item>
+        <item name="icon">@drawable/ic_baseline_supervised_user_circle_16</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/purple_500</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/button_size_smallest</item>
+        <item name="android:minHeight">@dimen/button_size_smallest</item>
+    </style>
+
+    <style name="Widget.AppTheme.ParticipateCheckBox" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/purple_500</item>
+        <item name="icon">@drawable/ic_outline_front_hand_24</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/purple_500</item>
+        <item name="android:text">@string/participate</item>
+        <item name="textAllCaps">false</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/button_size</item>
+        <item name="android:minHeight">@dimen/button_size</item>
+    </style>
+
+    <style name="Widget.AppTheme.ShareCheckBox" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/purple_500</item>
+        <item name="icon">@drawable/ic_baseline_share_24</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/purple_500</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/button_size</item>
+        <item name="android:minHeight">@dimen/button_size</item>
+    </style>
+
+    <style name="Widget.App.Play" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="icon">@drawable/ic_baseline_play_circle_outline_24</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/button_size_large</item>
+        <item name="android:minHeight">@dimen/button_size_large</item>
+    </style>
+
+    <style name="Widget.AppTheme.MentionsSumCheckBox" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/purple_500</item>
+        <item name="icon">@drawable/ic_baseline_groups_16</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/purple_500</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/button_size_smallest</item>
+        <item name="android:minHeight">@dimen/button_size_smallest</item>
+    </style>
+
+    <style name="Widget.AppTheme.MentionCheckBox" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/purple_500</item>
+        <item name="icon">@drawable/ic_baseline_person_add_alt_24</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:text">@string/mention</item>
+        <item name="textAllCaps">false</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/button_size</item>
+        <item name="android:minHeight">@dimen/button_size</item>
+    </style>
+
+    <style name="Widget.AppTheme.ViewCheckBox" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/purple_500</item>
+        <item name="icon">@drawable/ic_baseline_remove_red_eye_24</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/button_size</item>
+        <item name="android:minHeight">@dimen/button_size</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#999999</item>
+        <item name="boxStrokeWidth">1dp</item>
+    </style>
+
+    <style name="Theme.Fab" parent="ShapeAppearanceOverlay.Material3.FloatingActionButton">
+        <item name="android:backgroundTint">@color/purple_500</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_margin">@dimen/common_spacing_large</item>
+    </style>
+
+
+</resources>

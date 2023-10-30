@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_post"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/common_spacing_large"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/common_spacing_medium"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/common_spacing_small">
+
+        <TextView
+            android:id="@+id/author_card_post"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/common_spacing_medium"
+            android:layout_marginEnd="@dimen/common_spacing_medium"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14sp"
+            app:layout_constraintBottom_toTopOf="@+id/published_card_post"
+            app:layout_constraintEnd_toStartOf="@id/button_menu_card_post"
+            app:layout_constraintStart_toEndOf="@id/image_view_avatar_card_post"
+            app:layout_constraintTop_toTopOf="@+id/image_view_avatar_card_post"
+            tools:text="@sample/posts.json/data/author" />
+
+        <TextView
+            android:id="@+id/published_card_post"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_spacing_medium"
+            android:layout_marginEnd="@dimen/common_spacing_medium"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/image_view_avatar_card_post"
+            app:layout_constraintEnd_toStartOf="@+id/button_menu_card_post"
+            app:layout_constraintStart_toEndOf="@+id/image_view_avatar_card_post"
+            app:layout_constraintTop_toBottomOf="@id/author_card_post"
+            tools:text="@sample/posts.json/data/published" />
+
+        <ImageView
+            android:id="@+id/image_view_avatar_card_post"
+            android:layout_width="@dimen/posts_avatar_size"
+            android:layout_height="@dimen/posts_avatar_size"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/description_post_author_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_baseline_user_24" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_menu_card_post"
+            style="@style/Widget.App.MenuCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:checkable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_upper_menu_card_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:barrierMargin="@dimen/common_spacing_large"
+            app:constraint_referenced_ids="image_view_avatar_card_post, published_card_post" />
+
+        <TextView
+            android:id="@+id/content_card_post"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing_medium"
+            android:autoLink="web"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/image_view_attachment_image_card_post"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier_upper_menu_card_post"
+            tools:text="@sample/posts.json/data/content" />
+
+        <ImageView
+            android:id="@+id/image_view_attachment_image_card_post"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/common_spacing_medium"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/description_post_attachment"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/content_card_post"
+            tools:layout_height="@dimen/sign_avatar_size"
+            tools:layout_width="@dimen/sign_avatar_size"
+            tools:srcCompat="@drawable/ic_baseline_image_24"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_attachment_audio_card_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="
+            image_button_play_pause_audio_card_post,
+            seek_bar_audio_card_post"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/image_button_play_pause_audio_card_post"
+            style="@style/Widget.App.Play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_spacing_medium"
+            android:checkable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_view_attachment_image_card_post" />
+
+        <SeekBar
+            android:id="@+id/seek_bar_audio_card_post"
+            android:layout_width="@dimen/seek_bar"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_spacing_small"
+            android:layout_marginEnd="@dimen/common_spacing_large"
+            android:indeterminate="false"
+            android:progress="0"
+            android:progressDrawable="@drawable/track"
+            android:splitTrack="false"
+            android:thumb="@drawable/thumb"
+            app:layout_constraintBottom_toBottomOf="@+id/image_button_play_pause_audio_card_post"
+            app:layout_constraintStart_toEndOf="@+id/image_button_play_pause_audio_card_post"
+            app:layout_constraintTop_toTopOf="@+id/image_button_play_pause_audio_card_post" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_attachment_video_card_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:visibility="gone"
+            app:constraint_referenced_ids="
+            image_button_background_video_card_post,
+            image_button_play_video_card_post"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/image_button_background_video_card_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing_medium"
+            android:adjustViewBounds="true"
+            android:checkable="true"
+            android:contentDescription="@string/description_background_video"
+            android:src="@drawable/youtube240"
+            app:layout_constraintEnd_toEndOf="@id/group_attachment_video_card_post"
+            app:layout_constraintStart_toStartOf="@id/group_attachment_video_card_post"
+            app:layout_constraintTop_toBottomOf="@+id/image_button_play_pause_audio_card_post"
+            tools:background="@color/transparent"
+            tools:srcCompat="@drawable/ic_back_video" />
+
+        <ImageButton
+            android:id="@+id/image_button_play_video_card_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:checkable="true"
+            android:contentDescription="@string/description_play"
+            android:src="@drawable/ic_baseline_play_circle_outline_24"
+            app:layout_constraintBottom_toBottomOf="@id/image_button_background_video_card_post"
+            app:layout_constraintEnd_toEndOf="@id/image_button_background_video_card_post"
+            app:layout_constraintStart_toStartOf="@id/image_button_background_video_card_post"
+            app:layout_constraintTop_toTopOf="@id/image_button_background_video_card_post" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_downer_menu_card_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:barrierMargin="@dimen/common_spacing_medium"
+            app:constraint_referenced_ids="
+            content_card_post,
+            image_view_attachment_image_card_post,
+            group_attachment_video_card_post,
+            image_button_background_video_card_post" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/content_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing_medium"
+            app:dividerColor="@color/icon_button"
+            app:dividerInsetEnd="@dimen/common_spacing_medium"
+            app:dividerInsetStart="@dimen/common_spacing_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier_downer_menu_card_post" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_like_card_post"
+            style="@style/Widget.AppTheme.LikeCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing_small"
+            android:checkable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier_downer_menu_card_post" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_share_card_post"
+            style="@style/Widget.AppTheme.ShareCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_spacing_medium"
+            android:checkable="true"
+            android:contentDescription="@string/description_share"
+            app:layout_constraintBottom_toBottomOf="@id/button_like_card_post"
+            app:layout_constraintStart_toEndOf="@+id/button_like_card_post"
+            app:layout_constraintTop_toTopOf="@+id/button_like_card_post"
+            tools:text="500" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_mention_card_post"
+            style="@style/Widget.AppTheme.MentionCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_spacing_medium"
+            android:checkable="true"
+            app:layout_constraintBottom_toBottomOf="@id/button_share_card_post"
+            app:layout_constraintStart_toEndOf="@+id/button_share_card_post"
+            app:layout_constraintTop_toTopOf="@+id/button_share_card_post" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

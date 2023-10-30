@@ -1,0 +1,134 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+
+    namespace 'ru.netology.nework'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "ru.netology.nework"
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        Properties properties = new Properties()
+        if (rootProject.file("maps.properties").exists()) {
+            properties.load(rootProject.file("maps.properties").newDataInputStream())
+        }
+        //buildConfigField "String", "API_KEY", '"' + properties.getProperty("MAPS_API_KEY") + '"'
+        buildConfigField "String", "API_KEY", '"' + properties.getProperty("MAPKIT_API_KEY") + '"'
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders.usesCleartextTraffic = false
+            buildConfigField "String", "BASE_URL", "\"https://netomedia.ru/\""
+        }
+        /* доступ к HTTP трафику только в debug сборке
+          в AndroidManifest устанавливаем свой-во в тэге application
+          android:usesCleartextTraffic="${usesCleartextTraffic}
+          в зависимости от сборки будет подставляться значение
+        */
+        debug {
+            manifestPlaceholders.usesCleartextTraffic = false
+            /*buildConfigField "String", "BASE_URL", "\"http://10.0.2.2:9999/\""*/
+            buildConfigField "String", "BASE_URL", "\"https://netomedia.ru/\""
+        }
+
+    }
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    def core_version = "1.10.1"
+    def appcompat_version = "1.6.1"
+    def material_version = "1.9.0"
+    def constraintlayout_version = "2.1.4"
+    def fragment_version = "1.6.1"
+    def activity_version = "1.7.2"
+    def lifecycle_version = "2.6.1"
+    def nav_version = "2.6.0"
+    def room_version = "2.5.2"
+    def firebase_version = "31.2.2"
+    def okhttp_version = "4.10.0"
+    def swipe_refresh_layout_version = "1.2.0-alpha01"
+    def glide_version = "4.15.1"
+    def retrofit_version= "2.9.0"
+    def okhttplogging_version= "4.10.0"
+    def play_services_base_version = "18.2.0"
+    def coroutines_version = "1.6.4"
+    def imagepicker_version = "2.1"
+    def workmanager_version = "2.8.1"
+    def hilt_version = "2.44"
+    def paging_version = "3.1.1"
+    def version_Cropper = "4.3.2"
+
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "androidx.core:core-ktx:$core_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    implementation "androidx.activity:activity-ktx:$activity_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-paging:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation platform("com.google.firebase:firebase-bom:$firebase_version")
+    implementation "com.google.firebase:firebase-messaging-ktx"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.google.android.gms:play-services-base:$play_services_base_version"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_layout_version"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttplogging_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    implementation "com.github.dhaval2404:imagepicker:$imagepicker_version"
+    implementation "androidx.work:work-runtime-ktx:$workmanager_version"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
+    implementation 'com.yandex.android:maps.mobile:4.0.0-lite'
+    implementation "com.github.CanHub:Android-Image-Cropper:$version_Cropper"
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.2.2")
+}
+
+kapt {
+    correctErrorTypes true
+}
