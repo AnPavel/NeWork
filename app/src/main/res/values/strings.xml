@@ -57,7 +57,7 @@
     <string name="today">Today</string>
     <string name="yesterday">Yesterday</string>
     <string name="week_ago">Week ago</string>
-    <string name="stay_the_app">Are you sure you want to leave the application?</string>
+    <string name="stay_the_app">" Are you sure you want to exit the application?"</string>
     <string name="problem_loading">Data downloading from server failed. Try later</string>
     <string name="contentAd" translatable="false">contentAd</string>
     <string name="news">Recent entries</string>
@@ -132,8 +132,8 @@
     <string name="description_photo">Description photo</string>
     <string name="description_no_play" translatable="false">Description no play</string>
 
-    <string name="text_new_post">New Post text</string>
-    <string name="text_new_event">New Event text</string>
+    <string name="text_new_post">Input new Post text</string>
+    <string name="text_new_event">Input new Event text</string>
     <string name="text_event_date">Event date :</string>
     <string name="text_new_event_date">Date : </string>
     <string name="text_new_event_time">Time : </string>

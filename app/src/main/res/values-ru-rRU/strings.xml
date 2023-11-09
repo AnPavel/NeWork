@@ -50,7 +50,7 @@
     <string name="today">Сегодня</string>
     <string name="yesterday">Вчера</string>
     <string name="week_ago">Неделю назад</string>
-    <string name="stay_the_app">Вы уверены, что хотите остаться в приложении?</string>
+    <string name="stay_the_app">Вы уверены, что хотите выйти из приложения?</string>
     <string name="problem_loading">Загрузка данных с сервера не удалась. Попробуй позже</string>
     <string name="fragment_of_events">События</string>
     <string name="fragment_of_posts">Посты</string>
@@ -94,8 +94,8 @@
     <string name="sign_login">Логин</string>
     <string name="imageView_descript">Описание изображения</string>
     <string name="text_new_event_date">Дата :</string>
-    <string name="text_new_post">Новый пост</string>
-    <string name="text_new_event">Новое событие</string>
+    <string name="text_new_post">Введите текст нового поста</string>
+    <string name="text_new_event">Введите текст нового события</string>
     <string name="text_new_event_time">Время:</string>
     <string name="description_photo">Оптсание фото</string>
     <string name="text_job_name">Компания:</string>

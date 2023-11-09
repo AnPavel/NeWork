@@ -115,6 +115,17 @@ class NewEventFragment : Fragment() {
             }
         }
 
+        //ввод даты и времени с помощью Date/Time pickers при нажатии на пиктограмму внизу экрана
+        binding.imageViewPickDateTameFragmentNewEvent.setOnClickListener {
+            context?.let { item ->
+                pickTime(binding.editTextTimeFragmentNewEvent, item)
+            }
+            context?.let { item ->
+                pickDate(binding.editTextDateFragmentNewEvent, item)
+            }
+
+        }
+
         binding.buttonAddSpeakersFragmentNewEvent.setOnClickListener {
             val bundle = Bundle().apply {
                 putString("open", "speaker")

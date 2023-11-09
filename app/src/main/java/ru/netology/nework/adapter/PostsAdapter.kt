@@ -3,7 +3,6 @@ package ru.netology.nework.adapter
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.os.Build
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View.*
 import android.view.ViewGroup
@@ -33,6 +32,7 @@ interface OnPostInteractionListener {
     fun onPlayVideo(post: Post) {}
     fun onPlayAudio(post: Post) {}
     fun onOpenImageAttachment(post: Post) {}
+    fun goToPageUser(post: Post) {}
 }
 
 class PostsAdapter(
@@ -142,6 +142,10 @@ class PostViewHolder(
 
             imageViewAttachmentImageCardPost.setOnClickListener {
                 onPostInteractionListener.onOpenImageAttachment(post)
+            }
+
+            authorCardPost.setOnClickListener {
+                onPostInteractionListener.goToPageUser(post)
             }
 
             contentCardPost.setOnClickListener {

@@ -43,6 +43,14 @@ class EventsFragment : Fragment() {
             false
         )
 
+        authViewModel.data.observeForever {
+            if (!authViewModel.authorized) {
+                binding.fab.visibility = View.GONE
+            } else {
+                binding.fab.visibility = View.VISIBLE
+            }
+        }
+
         val adapter = EventAdapter(object : OnEventInteractionListener {
 
             override fun onOpenEvent(event: Event) {}
@@ -172,6 +180,10 @@ class EventsFragment : Fragment() {
                         .show()
                 }
             }
+        }
+
+        binding.fab.setOnClickListener {
+            findNavController().navigate(R.id.navNewEventFragment)
         }
 
         binding.swipeRefreshFragmentEvents.setOnRefreshListener(adapter::refresh)

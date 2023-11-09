@@ -62,8 +62,8 @@ class AppActivity : AppCompatActivity() {
         val nomVersionApp = System.getProperty("os.version")
         Log.d("MyAppLog", "AppActivity * OS: $nomVersionApp")
 
-        MapKitFactory.setApiKey(BuildConfig.API_KEY)
-        Log.d("MyAppLog", "AppActivity * MapKitFactory: ${BuildConfig.API_KEY}")
+        MapKitFactory.setApiKey(BuildConfig.MAPS_API_KEY)
+        Log.d("MyAppLog", "AppActivity * MapKitFactory: ${BuildConfig.MAPS_API_KEY}")
 
         binding = ActivityAppBinding.inflate(layoutInflater)
         setContentView(binding.root)

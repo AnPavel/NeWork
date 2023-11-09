@@ -26,6 +26,7 @@ import ru.netology.nework.adapter.PostsAdapter
 import ru.netology.nework.databinding.FragmentPostsBinding
 import ru.netology.nework.dto.Post
 import ru.netology.nework.ui.NewPostFragment.Companion.textArg
+import ru.netology.nework.ui.PostPreviewFragment.Companion.intArg
 import ru.netology.nework.utils.IntArg
 import ru.netology.nework.viewmodel.AuthViewModel
 import ru.netology.nework.viewmodel.PostViewModel
@@ -49,6 +50,14 @@ class PostsFragment : Fragment() {
             container,
             false
         )
+
+        authViewModel.data.observeForever {
+            if (!authViewModel.authorized) {
+                binding.fab.visibility = View.GONE
+            } else {
+                binding.fab.visibility = View.VISIBLE
+            }
+        }
 
         requireActivity().onBackPressedDispatcher.addCallback(this) {
             Log.d("MyAppLog", "PostsFragment * onBackPressedDispatcher : Запрос на выход")
@@ -158,6 +167,13 @@ class PostsFragment : Fragment() {
                 }
                 findNavController().navigate(R.id.navImageAttachmentFragment, bundle)
             }
+
+            override fun goToPageUser(post: Post) {
+                val idAuthor = post.authorId
+                findNavController().navigate(
+                    R.id.navProfileFragment,
+                    Bundle().apply { intArg = idAuthor.toInt() })
+            }
         })
 
         binding.recyclerViewContainerFragmentPosts.adapter =
@@ -190,6 +206,10 @@ class PostsFragment : Fragment() {
                         .show()
                 }
             }
+        }
+
+        binding.fab.setOnClickListener {
+            findNavController().navigate(R.id.navNewPostFragment)
         }
 
         binding.swipeRefreshFragmentPosts.setOnRefreshListener(adapter::refresh)
